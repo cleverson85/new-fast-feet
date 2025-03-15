@@ -9,7 +9,7 @@ export function Dashboard({children}: {children: React.ReactNode}) {
   const navigate = useNavigate();
 
   const menu = {
-    text: "font-roboto text-[15px] text-[#999] hover:opacity-90 hover:bg-[#7d40e7] hover:text-white opacity-100 border-0 rounded-xl p-2",
+    button: "font-roboto text-[15px] text-[#999] hover:opacity-90 hover:bg-[#7d40e7] hover:text-white opacity-100 border-0 rounded-xl p-2 focus:bg-[#7d40e7] focus:text-white",
   };
 
   const handleLogOut = () => {
@@ -32,34 +32,23 @@ export function Dashboard({children}: {children: React.ReactNode}) {
           <img src={logo} alt="FastFeet" className="ml-2.5 w-2xs" />
         </Link>
         <div className="flex items-center justify-between min-w-[50%]">
-          <div>
-            <Link to="/order">
-              <p className={`${menu.text}`} onClick={() => clickStyle("1")} id="1">
+          
+            <Link to="/order" className={`${menu.button}`}>
                 ENCOMENDAS
-              </p>  
             </Link>
-          </div>
-          <div>
-            <Link to="/deliveryman">
-              <p className={`${menu.text}`}>
-                ENTREGADORES
-              </p>
+          
+            <Link to="/deliveryman" className={`${menu.button}`}>
+              ENTREGADORES
             </Link>
-          </div>
-          <div>
-            <Link to="/recipient">
-              <p className={`${menu.text}`}>
-                DESTINATÁRIOS
-              </p>  
+          
+            <Link to="/recipient" className={`${menu.button}`}>
+              DESTINATÁRIOS
             </Link>
-          </div>
-          <div>
-            <Link to="/issues">
-              <p className={`${menu.text}`}>
-                PROBLEMAS
-              </p>  
+          
+            <Link to="/issues" className={`${menu.button}`}>
+              PROBLEMAS
             </Link>
-          </div>
+          
         </div>
         <div className="flex items-center flex-col m-[10px]">
           <p className="text-right tracking-normal font-roboto font-bold text-[15px] leading-[20px] opacity-100 text-[#666]">

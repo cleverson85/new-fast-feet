@@ -37,7 +37,7 @@ export function Login() {
           <div className="w-[300px] h-[73px] mb-2.5">
             <p className="text-left mb-[5px] tracking-normal text-[12px] opacity-100 text-[#444444] font-roboto font-bold">SEU E-EMAIL</p>
             <input
-              className="rounded-[4px] h-[44px] w-full px-[15px] py-[10px] bg-white border border-[#dddddd] opacity-100 placeholder:text-[#999999] placeholder:opacity-100"
+              className="rounded-[4px] h-[44px] w-full px-[15px] py-[10px] bg-white border border-[#dddddd] opacity-100 text-gray-500 placeholder:text-[#707070] placeholder:opacity-100"
               name="email"
               type="email"
               defaultValue={formRef.current.email}
@@ -48,7 +48,7 @@ export function Login() {
           <div className="w-[300px] h-[73px] mb-2.5">
             <p className="text-left mb-[5px] tracking-normal text-[12px] opacity-100 text-[#444444] font-roboto font-bold">SUA SENHA</p>
             <input
-              className="rounded-[4px] h-[44px] w-full px-[15px] py-[10px] bg-white border border-[#dddddd] opacity-100 placeholder:text-[#999999] placeholder:opacity-100"
+              className="rounded-[4px] h-[44px] w-full px-[15px] py-[10px] bg-white border border-[#dddddd] opacity-100 text-gray-500 placeholder:text-[#707070] placeholder:opacity-100"
               name="password"
               type="password"
               defaultValue={formRef.current.password}

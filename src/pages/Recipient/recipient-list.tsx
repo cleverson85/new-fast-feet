@@ -3,6 +3,7 @@ import { InputSearch } from "../../components/input-search";
 import { TableContainer } from "../../components/table-container";
 import axios from "axios";
 import { Column, Table } from "../../components/table";
+import { useMemo } from "react";
 
 
 async function getRecipient() {
@@ -20,9 +21,11 @@ type RecipientType = {
 export function RecipientList() {
   const recipients = [] as RecipientType;
 
-  const findByName = (name: string) => {
+  const findByName =  (name: string) => {
     console.log(name);
   }
+
+//  useMemo(() => findByName(name: string), []);
   
   const handleRecipient = () => {
     console.log("Recipient button clicked");
